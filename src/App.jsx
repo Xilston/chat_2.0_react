@@ -37,12 +37,18 @@ const dialogs = [
 ];
 
 export const App = () => {
-  const ulala = 11;
+  const [isDialogSelected, setDialogSelected] = useState(false);
 
   return (
     <>
       <Header />
-      <Main messages={messages} dialogs={dialogs} myId={myId} />
+      <Main
+        messages={messages}
+        dialogs={dialogs}
+        myId={myId}
+        isDialogSelected={isDialogSelected}
+        handleDialog={setDialogSelected}
+      />
       <Footer />
     </>
   );

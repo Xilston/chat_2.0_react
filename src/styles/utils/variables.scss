@@ -1,0 +1,40 @@
+$bg-color: #bacace;
+$elementColor: #73a1a9;
+
+$dialogsBlockColor:#c3d1e4;
+$hoverDialogColor: #280e5c;
+
+$message-bg-color: #81a6ca;
+$message-time-color: #476888;
+$message-own-bg-color: #a8b9d2;
+$messageBlockColor: #73a1a9;
+
+$mainTextColor: black;
+$hoverTextColor: black;
+
+$navHoverColor: #81a6ca;
+$navActiveColor: #cea86f;
+
+$gap: 20px;
+
+$main-height:  90vh;
+$header-bottm-height: (100vh - $main-height) / 2;
+$messages-area-height: 80%;
+
+$borderRadius: 20px;
+$elementPadding: 15px;
+$childRadius: $borderRadius - $elementPadding;
+/* https://icolorpalette.com/270e59_592a9c_964adb_c14cc2_f488f0 */
+
+/* $bg-color: #200f38;
+$elementColor: #301654;
+
+$messageBlockColor: #bea2e6;
+
+$dialogsBlockColor:#301654;
+$hoverDialogColor: #280e5c;
+
+$mainTextColor: #e0a7e1;
+$hoverTextColor: #d78cd8;
+
+$navHoverColor: #240b3b; */

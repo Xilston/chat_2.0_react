@@ -1,0 +1,72 @@
+.dialogs {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  width: 100%;
+  @include onTablet(){
+    width: 20%;
+    border-radius: $borderRadius 0 0 $borderRadius;
+  }
+  height: 100%;
+
+  background-color: $dialogsBlockColor;
+  border-radius: $borderRadius;
+
+  &__icon {
+    --icon-side: 40px;
+    width: var(--icon-side);
+    height: var(--icon-side);
+
+    border-radius: 50%;
+
+    font-size: 0.5rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    height: 10%;
+    padding: $elementPadding;
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__dialog {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: $gap / 2;
+    padding: 20px;
+
+    border-radius: $borderRadius / 1.5 0 0 $borderRadius / 1.5;
+    transition: background-color .2s ease-out;
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    height: 60px;
+    width: 100%;
+
+    &:hover{
+      color: $hoverTextColor;
+      background-color: $navHoverColor;
+    }
+
+    &--active{
+      background-color: $messageBlockColor;
+      color: $dialogsBlockColor;
+    }
+  }
+}

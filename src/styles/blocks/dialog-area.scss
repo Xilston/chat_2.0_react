@@ -1,0 +1,20 @@
+.dialog-area {
+  transition-duration: 1s;
+  position: absolute;
+  right: -680px;
+  @include onTablet(){
+    position: static;
+  }
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  padding: $elementPadding;
+
+  background-color: $messageBlockColor;
+  border-radius: 0 $borderRadius $borderRadius 0;
+}
+
+.mobileOn {
+  right: 0px;
+  z-index: 1;
+}

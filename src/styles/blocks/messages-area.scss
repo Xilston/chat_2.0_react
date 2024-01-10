@@ -1,0 +1,83 @@
+.messages-area {
+  background-color: $messageBlockColor;
+  background-color: $dialogsBlockColor;
+  height: $messages-area-height;
+  border-radius: $childRadius;
+  padding: 10px;
+
+  overflow-y: auto;
+}
+
+.messagesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  //position: relative;
+  display: flex;
+  gap: $gap / 1;
+
+  max-width: 65%;
+  width: max-content;
+
+  background-color: $message-bg-color;
+  border-radius: 10px;
+  padding-inline: $gap / 1;
+  padding-block: 10px;
+  margin-bottom: 5px;
+
+  &--ownMessage {
+    flex-direction: row-reverse;
+    align-self: self-end;
+
+    .message__content {
+      align-items: end;
+    }
+
+    /* .message__time {
+      align-self: flex-start;
+    } */
+
+    background-color: $message-own-bg-color;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //width: 70px;
+
+    &-ava {
+      --ava-side: 50px;
+      width: var(--ava-side);
+      height: var(--ava-side);
+      border-radius: 50%;
+    }
+  }
+
+  &__author-name {
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    gap: $gap / 5;
+    flex-direction: column;
+  }
+
+  &__text {
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+  }
+
+  &__time {
+   // position: absolute;
+    width: max-content;
+    align-self: flex-end;
+    font-size: 0.8rem;
+    color: $message-time-color;
+  }
+}

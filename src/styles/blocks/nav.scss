@@ -1,0 +1,53 @@
+.nav {
+  height: 100%;
+  display: none;
+  @include onTablet {
+    display: flex;
+  
+  }
+  &__list {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+
+  }
+
+  &__item {
+
+    height: 100%;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    padding-inline: 20px;
+
+    font-size: 15px;
+    color: $mainTextColor;
+
+    transition: background-color .2s ease-out;
+
+    &:hover{
+      color: $hoverTextColor;
+      background-color: $navHoverColor;
+    }
+
+    @include onTablet {
+      font-size: 20px;
+    }
+
+    &--active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      border-radius: 2px;
+      width: 100%;
+      background-color: $navActiveColor;
+    }
+  }
+}

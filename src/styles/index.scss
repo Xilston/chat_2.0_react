@@ -1,0 +1,25 @@
+@import './utils/reset.scss';
+@import './utils/variables.scss';
+@import './utils/mixins.scss';
+
+@import './blocks/header';
+@import './blocks/nav.scss';
+@import './blocks/main';
+@import './blocks/footer';
+
+@import './blocks/message-form';
+@import './blocks/messages-area';
+
+@import './blocks/dialogs.scss';
+@import './blocks/dialog-area.scss';
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  color: $mainTextColor;
+}
+
+body {
+  background-color: $bg-color;
+}
