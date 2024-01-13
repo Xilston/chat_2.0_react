@@ -1,3 +1,9 @@
+@mixin onlyMobile() {
+  @media (max-width: 679px) {
+    @content;
+  }
+}
+
 @mixin onTablet() {
   @media (min-width: 680px) {
     @content;
@@ -11,7 +17,7 @@
 }
 
 @mixin contentPaddingInline() {
-  padding-inline: 25px;
+  padding-inline: $gap;
 
   @include onTablet {
     padding-inline: 50px;

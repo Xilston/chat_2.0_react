@@ -19,6 +19,8 @@ export const Header = () => (
           </li>
         </ul>
       </nav>
+
+      <button className="header__nav-button button">...</button>
     </div>
   </header>
 );

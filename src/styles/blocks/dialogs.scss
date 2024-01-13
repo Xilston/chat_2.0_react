@@ -7,15 +7,10 @@
   overflow-y: auto;
   overflow-x: hidden;
 
-  width: 100%;
-  @include onTablet(){
-    width: 20%;
-    border-radius: $borderRadius 0 0 $borderRadius;
-  }
   height: 100%;
 
   background-color: $dialogsBlockColor;
-  border-radius: $borderRadius;
+
 
   &__icon {
     --icon-side: 40px;

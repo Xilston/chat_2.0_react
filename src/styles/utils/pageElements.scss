@@ -1,0 +1,21 @@
+.button {
+  background-color: $dialogsBlockColor;
+  border-radius: $childRadius;
+
+  width: max-content;
+  height: fit-content;
+
+  color: $mainTextColor;
+  font-size: 15px;
+  font-weight: bold;
+  padding: $gap / 2;
+  border: none;
+
+  &:hover {
+    background-color: $buttonColor;
+  }
+
+  &:active {
+    background-color: $buttonActiveColor;
+  }
+}

@@ -1,9 +1,9 @@
 .messages-area {
   background-color: $messageBlockColor;
   background-color: $dialogsBlockColor;
-  height: $messages-area-height;
+  //height: $messages-area-height;
   border-radius: $childRadius;
-  padding: 10px;
+  padding: $gap / 2;
 
   overflow-y: auto;
 }

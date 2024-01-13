@@ -1,11 +1,12 @@
 /* eslint-disable */
+import classNames from 'classnames';
 import cn from 'classnames';
 
 export const DialogsList = (props) => {
-  const { list, isDialogSelected, handleDialog } = props;
+  const { list,  className, selectedDialog, handleDialog } = props;
 
   return (
-    <aside className="dialogs">
+    <aside className={classNames("dialogs", className)}>
       <p className="dialogs__title">
         DIALOGS
       </p>
@@ -13,9 +14,9 @@ export const DialogsList = (props) => {
       <ul className="dialogs__list">
         {list.map(
           dialog => (<Dialog
-            dialog={dialog}
-            isDialogSelected={isDialogSelected}
+            selectedDialog={selectedDialog}
             handleDialog={handleDialog}
+            dialog={dialog}
           />)
         )}
       </ul>
@@ -24,14 +25,14 @@ export const DialogsList = (props) => {
 };
 
 const Dialog = (props) => {
-  const {dialog, isDialogSelected, handleDialog } = props;
+  const {dialog, handleDialog, selectedDialog } = props;
 
   return (
     <li
       className={cn('dialogs__dialog', {'dialogs__dialog--active': dialog.active})}
       onClick={() => {
         console.log(`LI CLICKEDDDD`);
-        handleDialog(!isDialogSelected)
+        handleDialog(dialog)
       }}
     >
       <img
@@ -40,14 +41,6 @@ const Dialog = (props) => {
         className='dialogs__icon'
       />
       <p>{dialog.title}</p>
-      <button
-        onClick={() => {
-          console.log(`LI CLICKEDDDD`);
-          handleDialog(!isDialogSelected)
-        }}
-      >
-        clo
-      </button>
     </li>
   );
 };

@@ -19,11 +19,16 @@ $gap: 20px;
 
 $main-height:  90vh;
 $header-bottm-height: (100vh - $main-height) / 2;
+$min-btm-head-height: 60px;
+
 $messages-area-height: 80%;
 
 $borderRadius: 20px;
 $elementPadding: 15px;
 $childRadius: $borderRadius - $elementPadding;
+
+$buttonColor: #cea86f;
+$buttonActiveColor: #a26844;
 /* https://icolorpalette.com/270e59_592a9c_964adb_c14cc2_f488f0 */
 
 /* $bg-color: #200f38;

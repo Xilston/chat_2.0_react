@@ -1,14 +1,57 @@
 .main {
   display: flex;
   justify-content: center;
-  height: $main-height;
+  //height: $main-height;
+  flex-grow: 1;
 
-  padding-block: 20px;
+  padding-block: $gap;
 
   &__content {
     display: flex;
 
     height: 100%;
     width: 100%;
+    position: relative;
+    //overflow: hidden;
   }
+
+}
+
+.main__dialogs {
+  width: 100%;
+  border-radius: $borderRadius;
+  @include onTablet() {
+    border-radius: $borderRadius 0 0 $borderRadius;
+
+    width: 20%;
+  }
+}
+
+.main__dialog {
+ @include onlyMobile() {
+  position: absolute;
+  left: 90%;
+  right: $gap;
+  top: 0;
+  bottom: 0;
+
+  border-radius: $borderRadius;
+  opacity: 0;
+  transition-duration: .3s;
+  filter: blur(10px);
+  transition-timing-function: ease-in-out;
+
+  z-index: 1;
+
+  &--active {
+    left: $gap;
+    opacity: 100;
+    filter: blur(0px);
+  }
+ }
+
+ @include onTablet {
+  width: 80%;
+  border-radius: 0 $borderRadius $borderRadius 0;
+ }
 }

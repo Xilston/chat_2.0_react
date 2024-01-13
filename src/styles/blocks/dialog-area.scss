@@ -1,20 +1,54 @@
 .dialog-area {
-  transition-duration: 1s;
-  position: absolute;
-  right: -680px;
-  @include onTablet(){
-    position: static;
+  &__dialog-bar--height{
+    height: 10%;
+    max-height: 50px;
   }
+
+  &__messagesList--height{
+    flex-grow: 1;
+  }
+
+  &__message-form--height{
+    height: 15%;
+  }
+
+  overflow-y: hidden;
+
+  display: flex;
   flex-direction: column;
-  width: 80%;
+  gap: $gap / 2;
+
   height: 100%;
+
   padding: $elementPadding;
 
   background-color: $messageBlockColor;
-  border-radius: 0 $borderRadius $borderRadius 0;
 }
 
-.mobileOn {
-  right: 0px;
-  z-index: 1;
+.dialog-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding-inline: $gap / 2;
+
+  //background-color: $dialogsBlockColor;
+
+  &__ava{
+    --avaSide: 50px;
+    width: var(--avaSide);
+    height: var(--avaSide);
+    border-radius: 50%;
+  }
+
+  &__dialog-info{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.buttons-block {
+  display: flex;
+  gap: $gap/2;
 }

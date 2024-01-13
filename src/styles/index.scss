@@ -1,6 +1,7 @@
 @import './utils/reset.scss';
 @import './utils/variables.scss';
 @import './utils/mixins.scss';
+@import './utils/pageElements.scss';
 
 @import './blocks/header';
 @import './blocks/nav.scss';
@@ -22,4 +23,10 @@ html {
 
 body {
   background-color: $bg-color;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

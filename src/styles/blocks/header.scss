@@ -4,6 +4,7 @@
 
   background-color: $elementColor;
   height: $header-bottm-height;
+  min-height: $min-btm-head-height;
 
   &__content {
     display: flex;
@@ -15,5 +16,11 @@
   &__logo {
     font-size: 30px;
     color: $mainTextColor;
+  }
+
+  &__nav-button {
+    @include onTablet {
+      display: none;
+    }
   }
 }

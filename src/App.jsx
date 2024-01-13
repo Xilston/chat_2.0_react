@@ -14,7 +14,7 @@ export const myId = 23;
 
 const abc = 'Note that the values row and row-reverse are affected by the directionality of the flex container. If its dir attribute is ltr, row represents the horizontal axis oriented from the left to the right, and row-reverse from the right to the left; if the dir attribute is rtl, row represents the axis oriented from the right to the left, and row-reverse from the left to the right.';
 const crowd_ico_url = 'https://vision.org.au/campaigns/wp-content/uploads/sites/13/2018/09/crowd-icon.png';
-const batman_ico_url = 'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-1024.png';
+export const batman_ico_url = 'https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-1024.png';
 const sm_ico_url = 'https://cdn.iconscout.com/icon/free/png-256/free-superman-dc-superhero-hero-justice-league-earth-saver-28701.png';
 
 const messages = [
@@ -27,27 +27,32 @@ const messages = [
 ];
 
 const dialogs = [
-  {title: 'GLOBAL ROOM', active: true, ico: crowd_ico_url},
-  {title: 'Vlad', ico: batman_ico_url},
-  {title: 'CUSTOM ROOM', ico: null},
-  {title: 'FILIP', ico: null},
-  {title: 'MARIA', ico: null},
-  {title: 'Den', ico: null},
-  {title: 'Yaro', ico: sm_ico_url},
+  {title: 'GLOBAL ROOM', dialogType: 'room', active: true, ico: crowd_ico_url},
+  {title: 'Vlad', dialogType: 'user', ico: batman_ico_url},
+  {title: 'CUSTOM ROOM', dialogType: 'room', ico: null},
+  {title: 'FILIP', dialogType: 'user', ico: null},
+  {title: 'MARIA', dialogType: 'user', ico: null},
+  {title: 'Den', dialogType: 'user', ico: null},
+  {title: 'Yaro', dialogType: 'user', ico: sm_ico_url},
 ];
 
+
 export const App = () => {
-  const [isDialogSelected, setDialogSelected] = useState(false);
+  const [selectedDialog, setSelectedDialog ] = useState(null);
+
+  function handleDialog(currentDialog = null) {
+    setSelectedDialog(currentDialog);
+  }
 
   return (
     <>
       <Header />
       <Main
+        selectedDialog={selectedDialog}
+        handleDialog={handleDialog}
         messages={messages}
         dialogs={dialogs}
         myId={myId}
-        isDialogSelected={isDialogSelected}
-        handleDialog={setDialogSelected}
       />
       <Footer />
     </>
