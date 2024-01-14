@@ -31,7 +31,7 @@
   justify-content: space-between;
   gap: 10px;
 
-  padding-inline: $gap / 2;
+  //padding-inline: $gap / 2;
 
   //background-color: $dialogsBlockColor;
 
@@ -45,10 +45,43 @@
   &__dialog-info{
     display: flex;
     align-items: center;
+    gap: $gap/2;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 }
 
 .buttons-block {
+  position: relative;
   display: flex;
   gap: $gap/2;
+}
+
+.default-hint {
+  margin: auto auto;
+  font-size: 20px;
+}
+
+.dialog-menu {
+  position: absolute;
+  top: 110%;
+  right: 0px;
+
+  width: max-content;
+  overflow: hidden;
+
+
+  border-radius: $borderRadius/2;
+  background-color: $bg-color;
+  box-shadow: 5px 5px 50px $messageBlockColor;
+  font-size: 20px;
+
+  &__item {
+    cursor: pointer;
+    padding: 10px;
+    &:hover{
+      background-color: $navHoverColor;
+
+    }
+  }
 }

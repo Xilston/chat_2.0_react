@@ -23,7 +23,8 @@
   @include onTablet() {
     border-radius: $borderRadius 0 0 $borderRadius;
 
-    width: 20%;
+    width: 27%;
+    resize: horizontal;
   }
 }
 

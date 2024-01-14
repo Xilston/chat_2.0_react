@@ -4,31 +4,41 @@ import classNames from "classnames";
 import { MessageForm } from "./MessageForm";
 import { MessagesList } from "./MessagesList";
 import { batman_ico_url } from "./App";
+import { useState } from "react";
 
 export const DialogArea = (props) => {
-  const { messages, myId, className, selectedDialog, handleDialog} = props;
+  const {myId, className, selectedDialog, handleDialog} = props;
 
   return (
+
     <section className={classNames('dialog-area', className)}>
-      <DialogBar
-        selectedDialog={selectedDialog}
-        handleDialog={handleDialog}
-      />
-      <MessagesList
-        className={classNames('dialog-area__messagesList--height')}
-        messagesList={messages}
-        myId={myId}
-        selectedDialog={selectedDialog}
-      />
-      <MessageForm className='dialog-area__message-form--height' />
+
+      {!selectedDialog && (<p className="default-hint">Choose the chat...</p>)}
+      {
+       selectedDialog && (
+        <>
+          <DialogBar
+            selectedDialog={selectedDialog}
+            handleDialog={handleDialog}
+          />
+          <MessagesList
+            className={classNames('dialog-area__messagesList--height')}
+            messagesList={selectedDialog.messagesArray}
+            myId={myId}
+            selectedDialog={selectedDialog}
+          />
+          <MessageForm className='dialog-area__message-form--height' />
+        </>
+        )}
     </section>
-  );
+  )
+
 }
 
 
 export const DialogBar = (props)=>{
   const {handleDialog, selectedDialog} = props;
-
+  const [ menuEnable, setMenuEnable ] = useState ( false );
   return (
     selectedDialog && (
       <div className='dialog-bar dialog-area__dialog-bar--height'>
@@ -46,11 +56,25 @@ export const DialogBar = (props)=>{
 
         <div className="buttons-block">
           <button className='button'>O</button>
-          <button className='button'>...</button>
+          <button className='button' onClick={()=>setMenuEnable(!menuEnable)}>...</button>
+          {menuEnable && (<DialogMenu/>)}
         </div>
-
-
       </div>
     )
   )
 }
+
+
+
+const DialogMenu = (  )   =>   {
+  return (
+    <div className="dialog-menu">
+      <ul>
+        <li className="dialog-menu__item">Показать медиа</li>
+        <li className="dialog-menu__item">Info</li>
+        <li className="dialog-menu__item">Оистить историю</li>
+        <li className="dialog-menu__item">Заблокировать</li>
+      </ul>
+    </div>
+  )
+ }

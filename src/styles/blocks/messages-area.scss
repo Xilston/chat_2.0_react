@@ -16,14 +16,14 @@
 .message {
   //position: relative;
   display: flex;
-  gap: $gap / 1;
+  gap: $gap / 2;
 
   max-width: 65%;
   width: max-content;
 
   background-color: $message-bg-color;
   border-radius: 10px;
-  padding-inline: $gap / 1;
+  padding-inline: $gap / 1.5;
   padding-block: 10px;
   margin-bottom: 5px;
 
@@ -35,9 +35,9 @@
       align-items: end;
     }
 
-    /* .message__time {
-      align-self: flex-start;
-    } */
+    .message__author-name {
+      flex-direction: row-reverse;
+    }
 
     background-color: $message-own-bg-color;
   }
@@ -50,7 +50,7 @@
     //width: 70px;
 
     &-ava {
-      --ava-side: 50px;
+      --ava-side: 40px;
       width: var(--ava-side);
       height: var(--ava-side);
       border-radius: 50%;
@@ -58,7 +58,12 @@
   }
 
   &__author-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $gap;
     font-weight: bold;
+    width: 100%;
   }
 
   &__content {
@@ -76,7 +81,7 @@
   &__time {
    // position: absolute;
     width: max-content;
-    align-self: flex-end;
+    //align-self: flex-end;
     font-size: 0.8rem;
     color: $message-time-color;
   }

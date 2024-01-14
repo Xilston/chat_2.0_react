@@ -6,7 +6,6 @@ import { DialogsList } from "./DialogsList";
 
 export const Main = (props) => {
   const {
-    messages,
     dialogs,
     myId,
     handleDialog,
@@ -25,7 +24,6 @@ export const Main = (props) => {
         />
         <DialogArea
           selectedDialog={selectedDialog}
-          messages={props.messages}
           myId={myId}
           handleDialog={handleDialog}
           className={classNames('main__dialog', {'main__dialog--active': selectedDialog})}

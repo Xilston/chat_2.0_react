@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Vlad",
+    "ava": "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png",
+    "id": 1
+  },
+  {
+    "name": "Yaro",
+    "ava": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/36-Grandfather-512.png",
+    "id": 2
+  },
+  {
+    "name": "Batman",
+    "ava": "https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-1024.png",
+    "id": 3
+  },
+  {
+    "name": "SuperMan",
+    "ava": "https://cdn.iconscout.com/icon/free/png-256/free-superman-dc-superhero-hero-justice-league-earth-saver-28701.png",
+    "id": 4
+  },
+  {
+    "name": "WonderWoman",
+    "ava": "https://cdn4.iconfinder.com/data/icons/superhero/400/wonderwoman.png",
+    "id": 5
+  },
+  {
+    "name": "Flash",
+    "ava": "https://cdn0.iconfinder.com/data/icons/superhero-2/256/Flash-512.png",
+    "id": 6
+  }
+]

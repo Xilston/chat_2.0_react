@@ -44,11 +44,10 @@
     align-items: center;
     gap: $gap / 2;
     padding: 20px;
-
     border-radius: $borderRadius / 1.5 0 0 $borderRadius / 1.5;
     transition: background-color .2s ease-out;
 
-    text-transform: uppercase;
+
     font-weight: bold;
 
     height: 60px;

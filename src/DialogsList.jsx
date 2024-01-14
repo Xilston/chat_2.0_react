@@ -6,7 +6,7 @@ export const DialogsList = (props) => {
   const { list,  className, selectedDialog, handleDialog } = props;
 
   return (
-    <aside className={classNames("dialogs", className)}>
+    <aside className={classNames("dialogs", className)} >
       <p className="dialogs__title">
         DIALOGS
       </p>
@@ -29,7 +29,7 @@ const Dialog = (props) => {
 
   return (
     <li
-      className={cn('dialogs__dialog', {'dialogs__dialog--active': dialog.active})}
+      className={cn('dialogs__dialog', {'dialogs__dialog--active': selectedDialog===dialog})}
       onClick={() => {
         console.log(`LI CLICKEDDDD`);
         handleDialog(dialog)
